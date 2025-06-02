@@ -36,22 +36,36 @@ Click to download the macOS and Windows installers for each facility:
 
 ---
 
+## 🔗 Direct URLs (for scripting or MDM systems)
+
+| Facility  | macOS (.pkg)                                                                                 | Windows (.msi)                                                                               |
+|-----------|----------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------|
+| **BCF**   | `https://github.com/KShaw-mdoc/Action1-Deployment/releases/download/BCF/action1_bcf.pkg`     | `https://github.com/KShaw-mdoc/Action1-Deployment/releases/download/BCF/action1_bcf.msi`     |
+| **DCF**   | `https://github.com/KShaw-mdoc/Action1-Deployment/releases/download/DCF/action1_dcf.pkg`     | `https://github.com/KShaw-mdoc/Action1-Deployment/releases/download/DCF/action1_dcf.msi`     |
+| **LCYDC** | `https://github.com/KShaw-mdoc/Action1-Deployment/releases/download/LCYDC/action1_lcydc.pkg` | `https://github.com/KShaw-mdoc/Action1-Deployment/releases/download/LCYDC/action1_lcydc.msi` |
+| **MCC**   | `https://github.com/KShaw-mdoc/Action1-Deployment/releases/download/MCC/action1_mcc.pkg`     | `https://github.com/KShaw-mdoc/Action1-Deployment/releases/download/MCC/action1_mcc.msi`     |
+| **MSP**   | `https://github.com/KShaw-mdoc/Action1-Deployment/releases/download/MSP/action1_msp.pkg`     | `https://github.com/KShaw-mdoc/Action1-Deployment/releases/download/MSP/action1_msp.msi`     |
+| **SMWRC** | `https://github.com/KShaw-mdoc/Action1-Deployment/releases/download/SMWRC/action1_smwrc.pkg` | `https://github.com/KShaw-mdoc/Action1-Deployment/releases/download/SMWRC/action1_smwrc.msi` |
+| **WC**    | `https://github.com/KShaw-mdoc/Action1-Deployment/releases/download/WC/action1_wc.pkg`       | `https://github.com/KShaw-mdoc/Action1-Deployment/releases/download/WC/action1_wc.msi`       |
+
+---
+
 ## 🚀 Deployment Instructions
 
 ### 📱 macOS via Mosyle MDM
 
 1. In Mosyle, go to **Install PKG > Add New Package**
 2. Select:
-   - ✅ "Already Have the PKG"
-   - ✅ "Automatically Set App Info"
-3. Paste the download link:
-   Example: https://github.com/KShaw-mdoc/Action1-Deployment/releases/download/<FacilityTag>/action1_<tag>.pkg
-4. Assign to the appropriate Smart Group (by facility)
+   - ✅ “Already Have the PKG”
+   - ✅ “Automatically Set App Info”
+3. Paste the download link from the table above (macOS `.pkg`)
+4. Assign to the appropriate Smart Group by facility
 
 ### 💻 Windows via Action1 Console or Script
 
-1. Download the `.msi` from the correct release
-2. Install manually or via RMM/script:
+1. Download the `.msi` file for the correct facility
+2. Install manually or use RMM/script:
+
 ```powershell
 msiexec /i action1_<tag>.msi /qn
 ```
